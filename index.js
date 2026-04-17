@@ -63,7 +63,7 @@ function saveNewBook(book, index) {
 
     const bookImage = document.createElement("img");
     bookImage.className = "book-image";
-    bookImage.className = book.imageUrl;
+    bookImage.textContent = book.imageUrl;
 }
 
 function editBook(book) {
