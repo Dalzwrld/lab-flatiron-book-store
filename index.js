@@ -45,3 +45,17 @@ const bookStore = {
 
 // Write your code here!
 
+const bookStoreTitle = document.getElementById("header");
+bookStoreTitle.textContent = "bookStore";
+
+function saveNewBook() {
+    for (let i = 0; i < bookStore.length; i++) {
+        if (bookStore[i] > bookStore[i + 1]) {
+            const bookContainer = document.createElement("li");
+            const bookTitle = document.createElement("h3");
+            const bookAuthor = document.createElement("p");
+            const bookImage = document.createElement("img");
+            return;
+        }
+    }
+}
