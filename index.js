@@ -48,14 +48,24 @@ const bookStore = {
 const bookStoreTitle = document.getElementById("header");
 bookStoreTitle.textContent = "bookStore";
 
-function saveNewBook() {
-    for (let i = 0; i < bookStore.length; i++) {
-        if (bookStore[i] > bookStore[i + 1]) {
-            const bookContainer = document.createElement("li");
-            const bookTitle = document.createElement("h3");
-            const bookAuthor = document.createElement("p");
-            const bookImage = document.createElement("img");
-            return;
-        }
-    }
+function saveNewBook(book, index) {
+    const bookContainer = document.createElement("li");
+    bookContainer.className = "book-container";
+    bookContainer.setAttribute("data-book-id", index);
+
+    const bookTitle = document.createElement("h3");
+    bookTitle.className = "book-title";
+     bookTitle.textContent = book.title;
+
+    const bookAuthor = document.createElement("p");
+    bookAuthor.className = "book-author";
+    bookAuthor.textContent = book.author;
+
+    const bookImage = document.createElement("img");
+    bookImage.className = "book-image";
+    bookImage.className = book.imageUrl;
+}
+
+function editBook(book) {
+
 }
