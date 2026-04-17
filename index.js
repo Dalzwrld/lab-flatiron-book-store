@@ -64,8 +64,16 @@ function saveNewBook(book, index) {
     const bookImage = document.createElement("img");
     bookImage.className = "book-image";
     bookImage.textContent = book.imageUrl;
+
+    const addBtn = document.createElement("button");
+    addBtn.className = "add-btn";
+    addBtn.textContent = "Add new book";
+
+    bookContainer.appendChild(bookTitle);
+    bookContainer.appendChild(bookAuthor);
+    bookContainer.appendChild(bookImage);
+    bookContainer.appendChild(addBtn);
+
+    return bookContainer;
 }
 
-function editBook(book) {
-
-}
